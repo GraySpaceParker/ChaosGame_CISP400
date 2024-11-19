@@ -45,7 +45,7 @@ int main()
 		}
 		else if (menuChoice == 2)
 		{
-			runChaosFern(window, event);
+			runChaos5orMoreVerts(window, event);
 		}
 		else if (menuChoice == 3)
 		{
