@@ -434,7 +434,7 @@ void runChaosPentagon(sf::RenderWindow& window, sf::Event& event)
 		window.draw(text);
 		for(int i = 0; i < vertices.size(); i++)
 		{
-		    RectangleShape rect(Vector2f(10,10));
+		    RectangleShape rect(Vector2f(4,4));
 		    rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
 		    rect.setFillColor(Color::Blue);
 		    window.draw(rect);
