@@ -47,7 +47,7 @@ int main()
 		}
 		else if (menuChoice == 2)
 		{
-			runChaos5orMoreVerts(window, event);
+			runChaosPentagon(window, event);
 		}
 		else if (menuChoice == 3)
 		{
