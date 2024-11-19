@@ -68,13 +68,17 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 		textPos.push_back(sf::Vector2f(20.f, 100.f));
 		option1.setPosition(textPos[0]);
 
-		sf::Text option2 = textSettings(font, "2) Barnsley Fern", 24, sf::Color::White);
+		sf::Text option2 = textSettings(font, "2) Greater Than 5", 24, sf::Color::White);
 		textPos.push_back(sf::Vector2f(20.f, 140.f));
 		option2.setPosition(textPos[1]);
 
+		sf::Text option2 = textSettings(font, "3) Barnsley Fern", 24, sf::Color::White);
+		textPos.push_back(sf::Vector2f(20.f, 180.f));
+		option2.setPosition(textPos[2]);
+
 		sf::Text exitText = textSettings(font, "0 or Esc) Exit", 24, sf::Color::White);
-		textPos.push_back(sf::Vector2f(20.f, 200.f));
-		exitText.setPosition(textPos[2]);
+		textPos.push_back(sf::Vector2f(20.f, 240.f));
+		exitText.setPosition(textPos[3]);
 
 		// Detect Mouse for selecting options / highlighting options
 		sf::Vector2i mousePositionInt = sf::Mouse::getPosition(window);
@@ -100,7 +104,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 						if (!mouseLeftClickHeld && event.mouseButton.button == sf::Mouse::Left)
 						{
 							choice = index + 1;
-							if (choice == 3) { choice = 0; }
+							if (choice == 4) { choice = 0; }
 							menuOpen = false;
 						}
 					}
@@ -137,6 +141,12 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 				choice = 2;
 				menuOpen = false;
 			}
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3) ||
+				sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad3))
+			{
+				choice = 3;
+				menuOpen = false;
+			}	
 			// End Menu loop and End Program
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num0) ||
 				sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad0) ||
@@ -328,7 +338,8 @@ void runChaosTriangle(sf::RenderWindow& window, sf::Event& event)
 void runChaos5orMoreVerts(sf::RenderWindow& window, sf::Event& event)
 {
 
-
+	////////////
+	////////////
 
 	while (endChaos)
 	{
@@ -343,8 +354,8 @@ void runChaos5orMoreVerts(sf::RenderWindow& window, sf::Event& event)
 		}
 
 		
-
-
+		///////////
+		///////////
 
 		
 		// Go back to main menu
