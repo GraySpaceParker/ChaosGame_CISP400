@@ -1,3 +1,5 @@
+//Project by: Robert Parrish, Ryan Parker
+
 #include "chaosGameFunctionality.h"
 
 int main()
