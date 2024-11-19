@@ -68,7 +68,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 		textPos.push_back(sf::Vector2f(20.f, 100.f));
 		option1.setPosition(textPos[0]);
 
-		sf::Text option2 = textSettings(font, "2) Greater Than 5", 24, sf::Color::White);
+		sf::Text option2 = textSettings(font, "2) runChaosPentagon, 24, sf::Color::White);
 		textPos.push_back(sf::Vector2f(20.f, 140.f));
 		option2.setPosition(textPos[1]);
 
