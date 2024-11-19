@@ -19,6 +19,6 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event);
 
 void runChaosTriangle(sf::RenderWindow& window, sf::Event& event);
 
-void runChaos5orMoreVerts(sf::RenderWindow& window, sf::Event& event);
+void runChaosPentagon(sf::RenderWindow& window, sf::Event& event);
 
 void runChaosFern(sf::RenderWindow& window, sf::Event& event);
