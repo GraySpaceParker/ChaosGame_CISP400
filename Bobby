@@ -92,9 +92,7 @@ int main()
 		   // {
 			 double randomVertex = rand() % 3;
 		   // }
-		  //  randomPrev = randomVertex;       //For some reason the fractal doesn't work properly if I declare randomVertex and randomPrev stuff above
-							// I thought I needed the previous vertex so that I could confirm no match between the last and current vertex
-							// But it works perfectly like this? Didn't find out why yet but just glad it works
+		  //  randomPrev = randomVertex;       
 			
 		    ///calculate midpoint between random vertex and the last point in the vector
 		    ///push back the newly generated coord.
