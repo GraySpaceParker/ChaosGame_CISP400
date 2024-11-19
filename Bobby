@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <iostream>
-#include <sstream>  //---------------------------------------------------------------------------------------------------- //include in functionality headerfile
+#include <sstream>
 #include <vector>
 
 //Make the code easier to type with "using namespace"
@@ -12,9 +12,9 @@ using namespace std;
 int main()
 {
 	// Create a video mode object
-	VideoMode vm(1920, 1080);	//---------------------------------------------------------------------------------------------- //remove window
+	VideoMode vm(1920, 1080);
 	// Create and open a window for the game
-	RenderWindow window(vm, "Chaos Game!!", Style::Default); //--------------------------------------------------------------------  //remove window
+	RenderWindow window(vm, "Chaos Game!!", Style::Default);
 
 	//Text and Font
 	Text text;
@@ -33,8 +33,8 @@ int main()
 	//Declarations
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
-	//double randomVertex = rand() % 3;                
-	//double randomPrev = randomVertex;		    
+	double randomVertex = rand() % 5;                 
+	double randomPrev = randomVertex;		   
 
 	while (window.isOpen())
 	{
@@ -43,7 +43,7 @@ int main()
 		Handle the players input
 		****************************************
 		*/
-		Event event;  // ----------------------------------------------------------------------------------------------------- //remove event
+		Event event;
 		while (window.pollEvent(event))
 		{
 		    if (event.type == Event::Closed)
@@ -59,7 +59,7 @@ int main()
 			    std::cout << "mouse x: " << event.mouseButton.x << std::endl;
 			    std::cout << "mouse y: " << event.mouseButton.y << std::endl;
 	
-			    if(vertices.size() < 3)
+			    if(vertices.size() < 5)
 			    {
 				vertices.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
 			    }
@@ -81,18 +81,18 @@ int main()
 		Update
 		****************************************
 		*/
-		double count = points.size() - 1;
+		
 		if(points.size() > 0)
 		{
 		    ///generate more point(s)
 		    ///select random vertex
 		    
 		    double count = points.size() - 1;
-		    //while (randomVertex == randomPrev)
-		   // {
-			 double randomVertex = rand() % 3;
-		   // }
-		  //  randomPrev = randomVertex;       
+		    while (randomVertex == randomPrev)
+		    {
+			double randomVertex = rand() % 5;
+		    }
+		    randomPrev = randomVertex;    
 			
 		    ///calculate midpoint between random vertex and the last point in the vector
 		    ///push back the newly generated coord.
