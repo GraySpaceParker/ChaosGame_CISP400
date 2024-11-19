@@ -7,6 +7,7 @@
 #include <time.h>
 #include <iostream>
 #include <string>
+#include <sstream>
 
 sf::Vector2f betweenPoint(sf::Vector2f point1, sf::Vector2f point2, float between);
 
@@ -15,5 +16,7 @@ sf::Text textSettings(const sf::Font& font, sf::String str, int charSize, const 
 short runMainMenu(sf::RenderWindow& window, sf::Event& event);
 
 void runChaosTriangle(sf::RenderWindow& window, sf::Event& event);
+
+void runChaos5orMoreVerts(sf::RenderWindow& window, sf::Event& event);
 
 void runChaosFern(sf::RenderWindow& window, sf::Event& event);
