@@ -1,3 +1,5 @@
+//Project by: Robert Parrish, Ryan Parker
+
 #include "chaosGameFunctionality.h"
 
 // Find a point "between" the distance starting from point1 to point2
@@ -7,6 +9,7 @@ sf::Vector2f betweenPoint(sf::Vector2f point1, sf::Vector2f point2, float betwee
 						  ((point1.y + point2.y) * between));
 }
 
+// Function to quickly customize text for a sf::Text variable
 sf::Text textSettings(const sf::Font &font, sf::String str, int charSize, const sf::Color& color, const sf::Uint32 style)
 {
 	sf::Text text;
@@ -19,6 +22,7 @@ sf::Text textSettings(const sf::Font &font, sf::String str, int charSize, const 
 	return text;
 }
 
+//Function that displays a menu, returning a number representing the menu option the user picked
 short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 {
 	// Boolean to detect when input is held
@@ -84,6 +88,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 			int index = 0;
 			while (index < textPos.size())
 			{
+				//check each option region for the mouse
 				if (textPos[index].y - 3 <= mousePosition.y && mousePosition.y <= textPos[index].y + 33)
 				{
 					highlight_yPos = textPos[index].y - 3;
@@ -118,7 +123,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 
 		// Select option if use enters the corresponding key
 		// Check which key was pressed
-		if (!keyPressHeld)
+		if (!keyPressHeld) //prevents multiple inputs from the "esc" key being pressed before this function was called
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1) ||
 				sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad1))
@@ -141,6 +146,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 				menuOpen = false;
 			}
 		}
+		//Escape key is not being held down
 		else if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 		{
 			keyPressHeld = false;
@@ -197,7 +203,7 @@ void runChaosTriangle(sf::RenderWindow& window, sf::Event& event)
 
 	// set font for text
 	sf::Font font;
-	if (!font.loadFromFile("Arial.ttf"))
+	if (!font.loadFromFile("LoveDays-2v7Oe.ttf"))
 	{
 		std::cout << "\nERROR: Failed To Load Font" << std::endl;
 		window.close();
@@ -319,6 +325,36 @@ void runChaosTriangle(sf::RenderWindow& window, sf::Event& event)
 	}
 }
 
+void runChaos5orMoreVerts(sf::RenderWindow& window, sf::Event& event)
+{
+
+
+
+	while (endChaos)
+	{
+		// check all the window's events that were triggered since the last iteration of the loop
+		while (window.pollEvent(event))
+		{
+			// "close requested" event: the user has closed the window
+			if (event.type == sf::Event::Closed) {
+				endChaos = false;
+				window.close();
+			}
+		}
+
+		
+
+
+
+		
+		// Go back to main menu
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+		{
+			endChaos = false;
+		}
+	}
+}
+
 void runChaosFern(sf::RenderWindow& window, sf::Event& event)
 {
 	//Vectors to hold points
@@ -342,7 +378,7 @@ void runChaosFern(sf::RenderWindow& window, sf::Event& event)
 
 	// set font for text
 	sf::Font font;
-	if (!font.loadFromFile("Arial.ttf"))
+	if (!font.loadFromFile("LoveDays-2v7Oe.ttf"))
 	{
 		std::cout << "\nERROR: Failed To Load Font" << std::endl;
 		window.close();
