@@ -398,7 +398,6 @@ void runChaosPentagon(sf::RenderWindow& window, sf::Event& event)
 		}
 		if (Keyboard::isKeyPressed(Keyboard::Escape))
 		{
-			window.close();
 			endChaos = false;
 		}
 		/*
