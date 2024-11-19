@@ -33,7 +33,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 
 	// set font
 	sf::Font font;
-	if (!font.loadFromFile("Arial.ttf"))
+	if (!font.loadFromFile("LoveDays-2v7Oe.ttf"))
 	{
 		std::cout << "\nERROR: Failed To Load Font" << std::endl;
 		window.close();
