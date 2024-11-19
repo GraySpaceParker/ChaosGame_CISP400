@@ -6,7 +6,7 @@ int main()
 	//   sf::Window name(sf::VideoMode(w,h), windowName)
 	//   - sf::VideoMode(w,h) creates a window with a width of w, and a height of h pixels
 	//   - windowName is a string that will be the title of the window
-	sf::RenderWindow window(sf::VideoMode(800, 600), "ChaosGame", sf::Style::Default);
+	sf::RenderWindow window(sf::VideoMode(1920, 1080), "ChaosGame", sf::Style::Default);
 
 	//set Framerate for the window (frames_per_second)
 	window.setFramerateLimit(120);
