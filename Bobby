@@ -115,7 +115,7 @@ int main()
 		    rect.setFillColor(Color::Blue);
 		    window.draw(rect);
 		}
-		for(int i = 0; i < vertices.size(); i++)
+		for(int i = 0; i < points.size(); i++)
 		{
 		    RectangleShape rect(Vector2f(10,10));
 		    rect.setPosition(Vector2f(points[i].x, points[i].y));
