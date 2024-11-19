@@ -33,8 +33,8 @@ int main()
 	//Declarations
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
-	//double randomVertex = rand() % 3;                 //Doesn't work?
-	//double randomPrev = randomVertex;		    //Doesn't work?   See line 95
+	//double randomVertex = rand() % 3;                
+	//double randomPrev = randomVertex;		    
 
 	while (window.isOpen())
 	{
