@@ -350,7 +350,7 @@ void runChaosPentagon(sf::RenderWindow& window, sf::Event& event)
 	text.setFont(font);
 	text.setCharacterSize(25);
 	text.setColor(Color::Red);
-	text.setString("1. Left click 3 points to outline a pentagon\n\n2. Left click one more time in the encompassed outline");
+	text.setString("1. Left click 5 points to outline a pentagon\n\n2. Left click one more time in the encompassed outline");
 
 	
 
