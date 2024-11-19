@@ -24,8 +24,8 @@ int main()
 		throw("Font failed to load");
 	}
 	text.setFont(font);
-	text.setCharacterSize(16);
-	text.setColor(Color::Blue);
+	text.setCharacterSize(25);
+	text.setColor(Color::Red);
 	text.setString("1. Left click 3 points to outline a pentagon\n\n2. Left click one more time in the encompassed outline");
 
 	
