@@ -47,6 +47,10 @@ int main()
 		{
 			runChaosFern(window, event);
 		}
+		else if (menuChoice == 3)
+		{
+			runChaosFern(window, event);
+		}
 		else if (menuChoice == 0)
 		{
 			window.close();
