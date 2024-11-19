@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <iostream>
-#include <sstream>
+#include <sstream>  //---------------------------------------------------------------------------------------------------- //include in functionality headerfile
 #include <vector>
 
 //Make the code easier to type with "using namespace"
@@ -12,9 +12,9 @@ using namespace std;
 int main()
 {
 	// Create a video mode object
-	VideoMode vm(1920, 1080);
+	VideoMode vm(1920, 1080);	//---------------------------------------------------------------------------------------------- //remove window
 	// Create and open a window for the game
-	RenderWindow window(vm, "Chaos Game!!", Style::Default);
+	RenderWindow window(vm, "Chaos Game!!", Style::Default); //--------------------------------------------------------------------  //remove window
 
 	//Text and Font
 	Text text;
@@ -43,7 +43,7 @@ int main()
 		Handle the players input
 		****************************************
 		*/
-		Event event;
+		Event event;  // ----------------------------------------------------------------------------------------------------- //remove event
 		while (window.pollEvent(event))
 		{
 		    if (event.type == Event::Closed)
