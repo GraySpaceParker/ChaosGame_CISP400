@@ -72,9 +72,9 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 		textPos.push_back(sf::Vector2f(20.f, 140.f));
 		option2.setPosition(textPos[1]);
 
-		sf::Text option2 = textSettings(font, "3) Barnsley Fern", 24, sf::Color::White);
+		sf::Text option3 = textSettings(font, "3) Barnsley Fern", 24, sf::Color::White);
 		textPos.push_back(sf::Vector2f(20.f, 180.f));
-		option2.setPosition(textPos[2]);
+		option3.setPosition(textPos[2]);
 
 		sf::Text exitText = textSettings(font, "0 or Esc) Exit", 24, sf::Color::White);
 		textPos.push_back(sf::Vector2f(20.f, 240.f));
@@ -87,7 +87,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 		// Check if mouse is over an option
 		float highlight_yPos = 0.f;
 		bool showHighlight = false;
-		if (10.f <= mousePosition.x && mousePosition.x <= 210.f)
+		if (10.f <= mousePosition.x && mousePosition.x <= 260.f)
 		{
 			int index = 0;
 			while (index < textPos.size())
@@ -120,7 +120,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 		}
 
 		// highlight if the mouse is over an option
-		sf::RectangleShape highlight(sf::Vector2f(200.f, 36.f));
+		sf::RectangleShape highlight(sf::Vector2f(250.f, 36.f));
 		highlight.setFillColor(sf::Color(50, 200, 80));
 		highlight.setPosition(10.f, highlight_yPos);
 		
@@ -179,6 +179,7 @@ short runMainMenu(sf::RenderWindow& window, sf::Event& event)
 		window.draw(title);
 		window.draw(option1);
 		window.draw(option2);
+		window.draw(option3);
 		window.draw(exitText);
 
 		window.display();
@@ -337,7 +338,7 @@ void runChaosTriangle(sf::RenderWindow& window, sf::Event& event)
 
 void runChaos5orMoreVerts(sf::RenderWindow& window, sf::Event& event)
 {
-
+	bool endChaos = true;
 	////////////
 	////////////
 
