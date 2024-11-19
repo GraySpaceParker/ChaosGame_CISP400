@@ -414,7 +414,7 @@ void runChaosPentagon(sf::RenderWindow& window, sf::Event& event)
 		    double count = points.size() - 1;
 		    while (randomVertex == randomPrev)
 		    {
-			double randomVertex = rand() % 5;
+			randomVertex = rand() % 5;
 		    }
 		    randomPrev = randomVertex;    
 			
